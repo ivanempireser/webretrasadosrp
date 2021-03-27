@@ -1,0 +1,282 @@
+:root {
+    --negro: #000000;
+    --gris:#262626;
+    --naranja:#ff9900;
+    --amarillo:#ffcc00;
+    --blanco: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Krub', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px; /* 1 rem = 10px */
+    background-image: linear-gradient(to top, var(--gris), var(--negro) 100%);
+}
+.fondoblanco {
+    font-size:16px;
+    background-image: var(--blanco);
+}
+
+h1 {
+    text-align: center;
+    color: var(--naranja);
+    font-size: 4rem;
+}
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--blanco);
+}
+h3 {
+    text-align: center;
+    color: var(--naranja);
+    font-size: 3rem;
+}
+p{
+    color:var(--blanco);
+}
+
+.contenedor{
+    /* right auto y left auto, hace que se centre*/
+    max-width:120rem;
+    /*
+    margin-top:0;
+    margin-right:auto;
+    margin-bottom:0;
+    margin-left:auto;
+    */
+
+    margin: 0 auto 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--naranja);
+}
+
+.navegacion-principal {
+    /*Distribuir categorias en la barra de navegación*/
+    display:flex;
+    flex-direction: column;
+    /*Verticalmente*/
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        
+        /*Horizontalmente*/
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    /*Que tan ancha es la barra de las categorías*/
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+    font-family: 'Krub', sans-serif;
+    background-color: var(--naranja);
+    font-size:2rem;
+    color: var(--negro);
+    text-decoration:none;
+}
+.navegacion-principal a:hover{
+    background-color: var(--negro);
+    color: var(--naranja);
+}
+
+.tricolumna{
+    margin-top:15rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+@media (min-width: 768px) {
+    .tricolumna{
+        display: grid;
+        /*fr = fracción*/
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 5rem;
+        /*Tamaño rows / tamaño columnas*/
+        /*grid:200px 200px /300px 300px;*/
+    }
+}
+
+.icono-tricolumna {
+    width: 15rem;
+    height: 15rem;
+}
+.icono-tricolumna:hover{
+    cursor: pointer;
+}
+
+
+.slider {
+    width: 100%;
+    height: 80%;
+    margin:auto;
+    overflow: hidden;
+}
+.slider ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: cambio 14s infinite alternate;
+}
+.slider li{
+    width: 100%;
+    list-style:none;
+}
+.slider img{
+    padding: 1rem;
+    width: 100%;
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+
+    35% {margin-left: -100%;}
+    60% {margin-left: -100%;}
+
+    65% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+/*Formulario*/
+.formulario {
+    background-color: var(--blanco);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--negro);
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom:1.5rem;
+}
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.campo input {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius:1.5rem;
+}
+.input-text{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius:0.5rem;
+    height:10rem;
+}
+
+.boton{
+    background-color: var(--naranja);
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align:center;
+    border: none;
+    margin-left:20%;
+    margin-right: 20%;
+    width: 60%;
+    padding: 1rem 4rem;
+}
+.boton:hover{
+    cursor: pointer;
+}
+/*Fin del formulario*/
+
+
+footer{
+    margin-top:4rem;
+    text-align: center;
+}
+
+/* Como Jugar */
+
+.textogrande{
+    font-size:6rem;
+}
+.espacioarriba {
+    margin-top:15rem;
+}
+
+@media (min-width: 768px) {
+    .comojugar {
+        font-size:2rem;
+    }
+}
+.comojugar {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 2;
+}
+
+.textolink{
+    color: var(--blanco);
+}
+
+.bicolumna{
+    margin-top:7rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.bicolumna-icono {
+    width: 60%;
+}
+@media (min-width: 768px) {
+    .bicolumna-icono{
+        width: 35rem;
+        
+    }
+    
+}
+
+.centrado{
+    margin:10rem auto;
+    display: block;
+    width: 30%;
+}
+
+/**/
+.textograndeinicio {
+    font-size: 6rem;
+    color: var(--blanco);
+}
+
+.textonormativas {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--blanco);
+}
+
+  

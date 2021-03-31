@@ -1,0 +1,17 @@
+.botonmenu{
+    border:none;
+    background: url('../img/discord.svg');
+    background-size: cover;
+
+    background-color: transparent;
+}
+
+.my-auto{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.no-p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
